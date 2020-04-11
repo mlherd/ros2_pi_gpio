@@ -1,0 +1,8 @@
+# Goal
+string gpio
+---
+# Result
+int32 value
+---
+# Feedback
+int32 feedback

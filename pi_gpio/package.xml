@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>pi_gpio</name>
+  <version>0.8.2</version>
+  <description>ROS2 action server to control Raspberry Pi GPIO</description>
+
+  <maintainer email="h.meliherdogan@gmail.com">H. Melih Erdogan</maintainer>
+  <license>Apache License 2.0</license>
+
+  <author email="h.meliherdogan@gmail.com">H. Melih Erdogan</author>
+
+  <exec_depend>pi_gpio_interface</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+
+  <!-- These test dependencies are optional
+  Their purpose is to make sure that the code passes the linters -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+  
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
