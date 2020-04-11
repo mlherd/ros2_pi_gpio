@@ -1,4 +1,4 @@
-# ROS 2 Raspberry Pi GPIO Package
+# ROS 2 Raspberry Pi GPIO Control Package
 ROS 2 package to control Raspberry Pi GPIO pins
 
 This packages allows you set and read your raspbeery Pi's GPIO pins via ROS 2 action server calls.
