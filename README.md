@@ -7,7 +7,7 @@ Tested with Raspberry Pi3, ROS2 Eloquent, and Ubuntu 18.04 Server
 
 <img src="pi_gpio.png" alt="" width="600">
 
-Link to the project video: 
+Link to the project video: https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6654600397346484224
 
 # Demo:
 
