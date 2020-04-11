@@ -11,7 +11,7 @@ Link to the project video:
 
 # Demo:
 
-  <img src="demo.gif" alt="" width="600">
+  <img src="docs/demo.gif" alt="" width="600">
 
 # 1. Build Instructions
  ```
@@ -28,12 +28,15 @@ Link to the project video:
  
 # 2. Usage
 - ### 2.1 Setup Raspberry Pi
+  - Link to Raspberry Pi 3 Model B Ubuntu 18.04 Server image file
 - ### 2.3 Edit gpio_pins.txt
   - <pin_id>,<input_output>
   - example:
     - 17,out
     - 18,in
 - ### 2.4 Run pi_gpio_server
+  - You may need to have super user rights to access GPIO pins
+  - ```sudo su```
   - ```ros2 run pi_gpio pi_gpio_server```
 - ### 2.5 Send goals to the action server
   - example via command line interface:
