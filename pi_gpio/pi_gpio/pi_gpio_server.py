@@ -11,16 +11,20 @@ import RPi.GPIO as GPIO
 class RaspberryPIGPIO():
     def __init__(self, pin_id, type):
         self.pin_id = pin_id
-        self.type = type
-        print (str(self.pin_id) + "-" + self.type)
+        self.type = type.rstrip()
         GPIO.setwarnings(False)
         #Use Broadcom pin-numbering scheme
         GPIO.setmode(GPIO.BCM) 
-        if type == "in":
+        if self.type == "in":
             GPIO.setup(pin_id, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Set pin as input
-        elif type == "out":
+            print ("Setting GPIO " + str(self.pin_id) + "-" + self.type)
+
+        elif self.type == "out":
             GPIO.setup(pin_id, GPIO.OUT) #Set pin as output
-    
+            print ("Setting GPIO " + str(self.pin_id) + "-" + self.type)
+
+        time.sleep(0.1)
+
     def set_pin(self, value):
         if value == 1:
             GPIO.output(self.pin_id, GPIO.HIGH) #Set pin High-1
@@ -115,14 +119,11 @@ class GPIOActionServer(Node):
 
         if action_type == "high":
             self.pin_dic[pin_id].set_pin(1)
-            print("on")
             time.sleep(0.1)
             result.value = 3
        
         elif action_type == "low":
-            time.sleep(2)
             self.pin_dic[pin_id].set_pin(0)
-            print("off")
             time.sleep(0.1)
             result.value = 3
 
@@ -130,10 +131,6 @@ class GPIOActionServer(Node):
             result.value = GPIO.input(int(pin_id))
 
         goal_handle.succeed()
-
-        #Cleanup the GPIO pins, so other processes can use them
-        GPIO.cleanup()
-
         return result
 
 def main(args=None):
@@ -145,6 +142,9 @@ def main(args=None):
     rclpy.spin(action_server, executor=executor)
 
     action_server.destroy()
+    
+    GPIO.cleanup()
+    
     rclpy.shutdown()
 
 if __name__ == '__main__':
