@@ -37,7 +37,7 @@ Link to the project video:
   - ```ros2 run pi_gpio pi_gpio_server```
 - ### 2.5 Send goals to the action server
   - example via command line interface:
-    - ros2 action send_goal <action_name> <action_message_type>
+    - ros2 action send_goal <action_name> <action_message_type> <action_goal>
   - ```ros2 action send_goal pi_gpio_server pi_gpio_interface/action/GPIO {'gpio: "17,high"'}```
   - ```ros2 action send_goal pi_gpio_server pi_gpio_interface/action/GPIO {'gpio: "18,low"'}```
   - ```ros2 action send_goal pi_gpio_server pi_gpio_interface/action/GPIO {'gpio: "18,read"'}```
