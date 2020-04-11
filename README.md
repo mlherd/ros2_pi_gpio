@@ -13,7 +13,7 @@ Link to the project video:
 
   <img src="demo.gif" alt="" width="600">
 
-# 1.Build Instructions
+# 1. Build Instructions
  ```
  source /opt/ros/<ros2_distro>/setup.bash
  mkdir <your_ros2_ws_name>
@@ -26,7 +26,7 @@ Link to the project video:
  source install/setup.bash
  ```
  
-# 2.Usage
+# 2. Usage
 - ### 2.1 Setup Raspberry Pi
 - ### 2.3 Edit gpio_pins.txt
   - <pin_id>,<input_output>
