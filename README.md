@@ -35,7 +35,7 @@ Link to the project video: https://www.linkedin.com/embed/feed/update/urn:li:ugc
     - 17,out
     - 18,in
 - ### 2.4 Run pi_gpio_server
-  - You may need to have super user rights to access GPIO pins
+  - You may need to have super user permissions to access GPIO pins
   - ```sudo su```
   - ```ros2 run pi_gpio pi_gpio_server```
 - ### 2.5 Send goals to the action server
