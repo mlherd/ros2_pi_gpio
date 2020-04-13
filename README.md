@@ -31,8 +31,8 @@ Link to the project video: https://www.linkedin.com/embed/feed/update/urn:li:ugc
   - Download Ubuntu Server 64-bit 
     - https://ubuntu.com/download/raspberry-pi
   - Flash the image file on your MicroSD card. I use Etcher on Ubuntu and Rufus on Windows. 
-    - Etcher: ``` https://www.balena.io/etcher/ ```
-    - Rufus: ``` https://rufus.ie/ ```
+    - Etcher: ```[https://www.balena.io/etcher/]```
+    - Rufus: ``` [https://rufus.ie/]```
   - Default user name is ubuntu and password is ubuntu.
   - Set up WiFi connection. You can skip this step if you want use the eternet port.
     - sudo nano /etc/netplan/50-cloud-init.yaml
