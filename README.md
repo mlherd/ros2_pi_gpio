@@ -28,8 +28,11 @@ Link to the project video: https://www.linkedin.com/embed/feed/update/urn:li:ugc
  
 # 2. Usage
 - ### 2.1 Setup Raspberry Pi
-  - Download Ubuntu Server 64-bit https://ubuntu.com/download/raspberry-pi
-  - Flash the image file on your MicroSD card. I use Etcher on Ubuntu and Rufus on Windows. https://www.balena.io/etcher/
+  - Download Ubuntu Server 64-bit 
+    - https://ubuntu.com/download/raspberry-pi
+  - Flash the image file on your MicroSD card. I use Etcher on Ubuntu and Rufus on Windows. 
+    - Etcher: ``` https://www.balena.io/etcher/ ```
+    - Rufus: ``` https://rufus.ie/ ```
   - Default user name is ubuntu and password is ubuntu.
   - Set up WiFi connection. You can skip this step if you want use the eternet port.
     - sudo nano /etc/netplan/50-cloud-init.yaml
