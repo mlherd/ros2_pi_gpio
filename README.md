@@ -31,8 +31,8 @@ Link to the project video: https://www.linkedin.com/embed/feed/update/urn:li:ugc
   - Download Ubuntu Server 64-bit 
     - https://ubuntu.com/download/raspberry-pi
   - Flash the image file on your MicroSD card. I use Etcher on Ubuntu and Rufus on Windows. 
-    - Etcher: [https://www.balena.io/etcher/]
-    - Rufus: [https://rufus.ie/]
+    - Etcher: https://www.balena.io/etcher/
+    - Rufus: https://rufus.ie/
   - Default user name is ubuntu and password is ubuntu.
   - Set up WiFi connection. You can skip this step if you want use the eternet port.
     - sudo nano /etc/netplan/50-cloud-init.yaml
@@ -78,9 +78,9 @@ Link to the project video: https://www.linkedin.com/embed/feed/update/urn:li:ugc
 - ### 2.5 Send goals to the action server
   - example via command line interface:
     - ros2 action send_goal <action_name> <action_message_type> <action_goal>
-  - ```ros2 action send_goal pi_gpio_server pi_gpio_interface/action/GPIO {'gpio: "17,high"'}```
-  - ```ros2 action send_goal pi_gpio_server pi_gpio_interface/action/GPIO {'gpio: "18,low"'}```
-  - ```ros2 action send_goal pi_gpio_server pi_gpio_interface/action/GPIO {'gpio: "18,read"'}```
+    - ```ros2 action send_goal pi_gpio_server pi_gpio_interface/action/GPIO {'gpio: "17,high"'}```
+    - ```ros2 action send_goal pi_gpio_server pi_gpio_interface/action/GPIO {'gpio: "18,low"'}```
+    - ```ros2 action send_goal pi_gpio_server pi_gpio_interface/action/GPIO {'gpio: "18,read"'}```
 
 # 3. Nodes
 
