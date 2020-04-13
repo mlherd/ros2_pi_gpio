@@ -28,7 +28,41 @@ Link to the project video: https://www.linkedin.com/embed/feed/update/urn:li:ugc
  
 # 2. Usage
 - ### 2.1 Setup Raspberry Pi
-  - Link to Raspberry Pi 3 Model B Ubuntu 18.04 Server image file
+  - Download Ubuntu Server 64-bit https://ubuntu.com/download/raspberry-pi
+  - Flash the image file on your MicroSD card. I use Etcher on Ubuntu and Rufus on Windows. https://www.balena.io/etcher/
+  - Default user name is ubuntu and password is ubuntu.
+  - Set up WiFi connection. You can skip this step if you want use the eternet port.
+    - sudo nano /etc/netplan/50-cloud-init.yaml
+    -  ```
+        network:
+            ethernets:
+                eth0:
+                    dhcp4: true
+                    optional: true
+            version: 2
+            wifis:
+                wlan0:
+                    optional: true
+                    dhcp4: true
+                    access-points:
+                        "<Your WiFi Name>":
+                            password: "<Your WiFi Password>"
+        ```
+        - Save the file and apply the changes
+          - ```sudo netplan --debug try```
+          - ```sudo netplan --debug generate```
+          - ```sudo netplan --debug apply```
+    
+    - Generate SSH Keys
+      - ```sudo ssh-keygen -A```
+      
+    - Install ROS 2 Eloquent
+      - ```https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/```
+      - Make sure you install ROS-Base Install (Bare Bones)
+      
+    - Install development tools and ROS tools
+      - ```https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Development-Setup/```
+      
 - ### 2.3 Edit gpio_pins.txt
   - <pin_id>,<input_output>
   - example:
